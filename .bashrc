@@ -14,7 +14,7 @@ HISTCONTROL=ignoreboth
 
 # append to the history file, don't overwrite it
 shopt -s histappend
-
+shopt -s extglob
 # for setting history length see HISTSIZE and HISTFILESIZE in bash(1)
 HISTSIZE=1000
 HISTFILESIZE=2000
@@ -29,11 +29,6 @@ shopt -s checkwinsize
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
-
-# set variable identifying the chroot you work in (used in the prompt below)
-if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
-    debian_chroot=$(cat /etc/debian_chroot)
-fi
 
 # set a fancy prompt (non-color, unless we know we "want" color)
 case "$TERM" in
@@ -56,22 +51,6 @@ if [ -n "$force_color_prompt" ]; then
     fi
 fi
 
-if [ "$color_prompt" = yes ]; then
-    PS1='${debian_chroot:+($debian_chroot)}\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$ '
-else
-    PS1='${debian_chroot:+($debian_chroot)}\u@\h:\w\$ '
-fi
-unset color_prompt force_color_prompt
-
-# If this is an xterm set the title to user@host:dir
-case "$TERM" in
-xterm*|rxvt*)
-    PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
-    ;;
-*)
-    ;;
-esac
-
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -86,9 +65,6 @@ fi
 
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
-
-# some more ls aliases
-alias ll='ls -alF'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
@@ -114,7 +90,7 @@ if ! shopt -oq posix; then
   fi
 fi
 
-#set -o vi
+set -o vi
 set editing-mode vi
 
 alias gs='git status'
@@ -122,13 +98,34 @@ alias ga='git add .'
 alias gc='git commit'
 alias gp='git push'
 alias i3conf='vim /home/anna/.config/i3/config'
-alias bpconf='/home/anna/Scripts/backup/backup-configs.sh'
 
 alias l='ls -aX -I "." -I ".." --color=auto'
-alias runcs='runcs.sh'
-alias mkcpr='make-c-project.sh'
-alias mkcspr='make-cs-project.sh'
 alias c='clear'
-export PS1="[ \u in \W ] > "
+alias date='date +"%d/%m/%y (%a/%b) | %H:%M (%:z)"'
 export PATH=$PATH:/home/anna/Scripts
 export EDITOR=/usr/local/bin/vim
+
+_GREEN=$(tput setaf 2)
+_YELLOW=$(tput setaf 3)
+
+_BLUE=$(tput setaf 4)
+_CYAN=$(tput setaf 6)
+
+_RED=$(tput setaf 1)
+_MAGENTA=$(tput setaf 5)
+
+_BLACK=$(tput setaf 0)
+_WHITE=$(tput setaf 7)
+
+_BOLD=$(tput bold)
+_RESET=$(tput sgr0)
+
+#export PS1="[${_GREEN}\u in \W${_RESET}] > "
+
+if [ "$color_prompt" = yes ]; then
+	export PS1="[\u in \W]\$ "
+else
+	export PS1="[\u in \W]\$ "
+fi
+
+unset color_prompt force_color_prompt

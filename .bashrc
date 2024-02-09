@@ -94,13 +94,15 @@ set -o vi
 set editing-mode vi
 
 alias gs='git status'
-alias ga='git add .'
-alias gc='git commit'
+alias ga='git add'
+alias gcm='git commit -m "$1"'
+alias gc='git clone "$1"'
 alias gp='git push'
 alias i3conf='vim /home/anna/.config/i3/config'
 
-alias l='ls -aX -I "." -I ".." --color=auto'
+alias l='ls -aX -I "." -I ".." --color=auto --group-directories-first'
 alias c='clear'
+alias v='vim'
 alias date='date +"%d/%m/%y (%a/%b) | %H:%M (%:z)"'
 export PATH=$PATH:/home/anna/Scripts
 export EDITOR=/usr/local/bin/vim

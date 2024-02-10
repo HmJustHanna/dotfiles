@@ -95,39 +95,25 @@ set editing-mode vi
 
 alias gs='git status'
 alias ga='git add'
-alias gcm='git commit -m "$1"'
-alias gc='git clone "$1"'
+alias gc='git commit'
 alias gp='git push'
 alias i3conf='vim /home/anna/.config/i3/config'
 
 alias l='ls -aX -I "." -I ".." --color=auto --group-directories-first'
 alias c='clear'
-alias v='vim'
 alias date='date +"%d/%m/%y (%a/%b) | %H:%M (%:z)"'
 export PATH=$PATH:/home/anna/Scripts
 export EDITOR=/usr/local/bin/vim
 
-_GREEN=$(tput setaf 2)
-_YELLOW=$(tput setaf 3)
-
-_BLUE=$(tput setaf 4)
-_CYAN=$(tput setaf 6)
-
-_RED=$(tput setaf 1)
-_MAGENTA=$(tput setaf 5)
-
-_BLACK=$(tput setaf 0)
-_WHITE=$(tput setaf 7)
+_GREEN=$(tput setaf 10)
 
 _BOLD=$(tput bold)
 _RESET=$(tput sgr0)
 
-#export PS1="[${_GREEN}\u in \W${_RESET}] > "
-
 if [ "$color_prompt" = yes ]; then
-	export PS1="[\u in \W]\$ "
+	export PS1="[${_GREEN}\u in \W${_RESET}] > "
 else
-	export PS1="[\u in \W]\$ "
+	export PS1="[\u in \W] > "
 fi
 
 unset color_prompt force_color_prompt

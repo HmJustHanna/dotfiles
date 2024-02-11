@@ -46,13 +46,26 @@ URxvt*cursorBlink:      false
 URxvt*saveLines:        5000
 URxvt*internalBorder:   5
 
-!keybindings
+! keybindings
 
 URxvt.iso14755:                 false
-URxvt.keysym.Shift-Control-V:   eval:paste_clipboard
-URxvt.keysym.Shift-Control-C:   eval:selection_to_clipboard
+!URxvt.keysym.Shift-Control-V:   eval:paste_clipboard
+!URxvt.keysym.Shift-Control-C:   eval:selection_to_clipboard
 
 ! extensions
 
-URxvt.perl-ext-common:  font-size,matcher
-URxvt.urlLauncher:      /usr/bin/firefox
+! URxvt.perl-lib:         /home/anna/.config/urxvt
+
+URxvt.perl-ext-common:  default,font-size,keyboard-select,selection-to-clipboard
+
+! url-select
+
+! URxvt.urlLauncher:          /usr/bin/firefox
+! URxvt.url-select.underline: true
+! URxvt.keysym.M-u:           url-select:select_next
+
+! keyboard-select
+
+URxvt.keysym.M-s:           perl:keyboard-select:search
+URxvt.keysym.M-Escape:      perl:keyboard-select:activate
+! URxvt.keyboard-select.clipboard: true

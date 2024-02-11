@@ -55,8 +55,6 @@ fi
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
     alias ls='ls --color=auto'
-    #alias dir='dir --color=auto'
-    #alias vdir='vdir --color=auto'
 
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
@@ -90,30 +88,20 @@ if ! shopt -oq posix; then
   fi
 fi
 
-set -o vi
-set editing-mode vi
-
-alias gs='git status'
-alias ga='git add'
-alias gc='git commit'
-alias gp='git push'
-alias i3conf='vim /home/anna/.config/i3/config'
-
-alias l='ls -aX -I "." -I ".." --color=auto --group-directories-first'
-alias c='clear'
-alias date='date +"%d/%m/%y (%a/%b) | %H:%M (%:z)"'
-export PATH=$PATH:/home/anna/Scripts
-export EDITOR=/usr/local/bin/vim
-
 _GREEN=$(tput setaf 10)
-
 _BOLD=$(tput bold)
 _RESET=$(tput sgr0)
 
 if [ "$color_prompt" = yes ]; then
-	export PS1="[${_GREEN}\u in \W${_RESET}] > "
+	export PS1="[\u in \W] > "
 else
 	export PS1="[\u in \W] > "
 fi
 
 unset color_prompt force_color_prompt
+
+set -o vi
+set editing-mode vi
+export PATH=$PATH:/home/anna/Scripts
+export EDITOR=/usr/local/bin/vim
+

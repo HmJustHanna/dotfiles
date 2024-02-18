@@ -2,7 +2,6 @@ alias gs='git status'
 alias ga='git add'
 alias gc='git commit'
 alias gp='git push'
-alias i3conf='vim /home/anna/.config/i3/config'
 
 alias l='ls -aX -I "." -I ".." --color=auto --group-directories-first'
 alias ll='ls -aXl -I "." -I ".." --color=auto --group-directories-first'

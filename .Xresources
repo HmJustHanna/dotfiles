@@ -37,8 +37,8 @@
 
 ! URXVT
 
-URxvt.font:             xft:Hack Nerd Font:size=14
-URxvt.boldFont:         xft:Hack Nerd Font:bold:size=14
+URxvt.font:             xft:Hack Nerd Font:size=12
+URxvt.boldFont:         xft:Hack Nerd Font:bold:size=12
 URxvt.visualBell:       true
 
 URxvt*scrollBar:        false

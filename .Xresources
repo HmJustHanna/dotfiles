@@ -39,6 +39,10 @@
 
 URxvt.font:             xft:Hack Nerd Font:size=12
 URxvt.boldFont:         xft:Hack Nerd Font:bold:size=12
+
+!URxvt.font:             xft:DejaVu Sans Mono:size=12
+!URxvt.boldFont:         xft:DejaVu Sans Mono:bold:size=12
+
 URxvt.visualBell:       true
 
 URxvt*scrollBar:        false

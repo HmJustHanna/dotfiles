@@ -1,7 +1,6 @@
 syntax enable
 
 colorscheme default
-set number
 set mouse=
 
 set expandtab

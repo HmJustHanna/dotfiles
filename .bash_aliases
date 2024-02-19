@@ -7,6 +7,8 @@ alias l='ls -aX -I "." -I ".." --color=auto --group-directories-first'
 alias ll='ls -aXl -I "." -I ".." --color=auto --group-directories-first'
 alias c='clear'
 alias date='date +"%d/%m/%y (%a/%b) | %H:%M (%:z)"'
+alias feh='feh -F'
+alias r='ranger'
 
 connect-wifi() {
 # --> overwrite the existing configuration with home-wifi.yaml

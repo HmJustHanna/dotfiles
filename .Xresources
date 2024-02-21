@@ -32,8 +32,8 @@
 *.color14:  #00ffff
 
 ! white
-*.color7:   #c0c0c0
-*.color15:  #ffffff
+*.color7:   #929292
+*.color15:  #929292
 
 ! URXVT
 
@@ -43,12 +43,15 @@ URxvt.boldFont:         xft:Hack Nerd Font:bold:size=12
 !URxvt.font:             xft:DejaVu Sans Mono:size=12
 !URxvt.boldFont:         xft:DejaVu Sans Mono:bold:size=12
 
-URxvt.visualBell:       true
+URxvt.visualBell:       false
 
 URxvt*scrollBar:        false
 URxvt*cursorBlink:      false
 URxvt*saveLines:        5000
-URxvt*internalBorder:   5
+URxvt*internalBorder:   0
+URxvt*transparent:      1
+! URxvt*fading:           30
+URxvt*shading:          10
 
 ! keybindings
 

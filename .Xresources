@@ -1,6 +1,5 @@
 ! ~/.Xresources
 ! by https://github.com/HmJustHanna
-! keep your configs simple and clean 
 ! thank you https://www.askapache.com/linux/rxvt-xresources/
 
 ! special
@@ -9,7 +8,7 @@
 *.cursorColor:  #929292
 
 ! black
-*.color0:   #000000
+*.color0:   #101930
 *.color8:   #808080
 
 ! red
@@ -42,8 +41,8 @@
 
 ! URXVT
 
-URxvt.font:             xft:Hack Nerd Font:size=14
-URxvt.boldFont:         xft:Hack Nerd Font:bold:size=14
+URxvt.font:             xft:Hack Nerd Font:size=12
+URxvt.boldFont:         xft:Hack Nerd Font:bold:size=12
 
 ! URxvt.font:             xft:DejaVu Sans Mono:size=12
 ! URxvt.boldFont:         xft:DejaVu Sans Mono:bold:size=12
@@ -56,8 +55,9 @@ URxvt*cursorBlink:      false
 URxvt*saveLines:        5000
 URxvt*internalBorder:   0
 URxvt*transparent:      1
-URxvt*shading:          10
-! URxvt*fading:           30
+URxvt*shading:          25
+URxvt*fading:           40
+! URxvt*dynamicColors: on
 
 ! KEYBINDINGS
 

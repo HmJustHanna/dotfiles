@@ -1,13 +1,5 @@
-"
-"  __  __ /\_\
-" /\ \/\ \\/\ \ /' __` __`\/\`'__\/'___\
-" \ \ \_/ |\ \ \/\ \/\ \/\ \ \ \//\ \__/
-"  \ \___/  \ \_\ \_\ \_\ \_\ \_\\ \____\
-"   \/__/    \/_/\/_/\/_/\/_/\/_/ \/____/
-"
+" .vimrc
 " by https://github.com/HmJustHanna
-"
-" art from https://www.asciiart.eu/text-to-ascii-art
 " thank you https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
 
 set history=500
@@ -37,10 +29,11 @@ filetype indent on
 " INTERFACE
 
 
-colorscheme default
 syntax enable
-
-" set termguicolors
+set termguicolors
+set background=dark
+colorscheme wildcharm
+hi Normal guibg=NONE ctermbg=NONE
 
 set mouse=
 set wildmenu

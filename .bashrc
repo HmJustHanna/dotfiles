@@ -7,6 +7,7 @@
 [[ $- != *i* ]] && return
 
 export TERM="rxvt-unicode-256color"
+export BROWSER="firefox"
 export EDITOR="vim"
 export MANPAGER="less"
 export GCC_COLORS="error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01"
@@ -43,6 +44,7 @@ alias note="vim $HOME/Documents/notes/ubuntu-server.txt"
 alias feh="feh -F"
 alias N="newsboat"
 alias P="podboat"
+alias M="mocp"
 alias ip="ip -c a"
 
 alias note="vim $HOME/Documents/notes/ubuntu-server.txt"

@@ -78,10 +78,10 @@ toggle_show_time      = ^t
 toggle_show_format    = ^f
 toggle_menu           = TAB
 toggle_layout         = t
-toggle_hidden_files   = H
+toggle_hidden_files   = '
 show_lyrics           = L
 theme_menu            = T
-help                  = h ?
+help                  = H
 refresh               = ^r
 reload                = r
 

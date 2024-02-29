@@ -39,6 +39,12 @@
 *.color7:   #929292
 *.color15:  #929292
 
+! COLORS to MAN
+
+URxvt.colorIT:      yellow
+URxvt.colorBD:      white
+URxvt.colorUL:      magenta
+
 ! URXVT
 
 URxvt.font:             xft:Hack Nerd Font:size=12

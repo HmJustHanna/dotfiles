@@ -1,6 +1,7 @@
-" .vimrc
-" by https://github.com/HmJustHanna
+"
+" ~/.vimrc by https://github.com/HmJustHanna
 " thank you https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
+"
 
 set history=500
 set autoread

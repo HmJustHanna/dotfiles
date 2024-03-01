@@ -1,6 +1,7 @@
-! ~/.Xresources
-! by https://github.com/HmJustHanna
+!
+! ~/.Xresources by https://github.com/HmJustHanna
 ! thank you https://www.askapache.com/linux/rxvt-xresources/
+!
 
 ! special
 *.foreground:   #929292

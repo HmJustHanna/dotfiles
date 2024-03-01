@@ -63,7 +63,7 @@
 # within which it was originally started.
 
 # Show file titles (title, author, album) instead of file names?
-#ReadTags = yes
+ReadTags = yes
 
 # In which directory do you store your music files?  If you specify it
 # you will be able to jump straight to this directory with the '-m'
@@ -450,10 +450,10 @@ Fastdir3 = /homa/anna/Music/piano
 # zero.  Note that if you decrease the cache size below the number of items
 # currently in the cache, the number will not decrease immediately (if at
 # all).
-#TagsCacheSize = 256
+TagsCacheSize = 0
 
 # Number items in the playlist.
-#PlaylistNumbering = yes
+PlaylistNumbering = no
 
 # Main window layouts can be configured.  You can change the position and
 # size of the menus (directory and playlist).  You have three layouts and
@@ -496,7 +496,7 @@ Fastdir3 = /homa/anna/Music/piano
 #             occupy 10 lines and the directory menu the rest.
 #
 #Layout1 = directory(0,0,50%,100%):playlist(50%,0,FILL,100%)
-#Layout2 = directory(0,0,100%,100%):playlist(0,0,100%,100%)
+Layout2 = directory(0,0,100%,100%):playlist(0,0,100%,100%)
 #Layout3 = ""
 
 # When the song changes, should the menu be scrolled so that the currently
@@ -570,7 +570,7 @@ Fastdir3 = /homa/anna/Music/piano
 #SetScreenTitle = yes
 
 # Display full paths instead of just file names in the playlist.
-#PlaylistFullPaths = yes
+PlaylistFullPaths = no
 
 # The following setting describes how block markers are displayed in
 # the play time progress bar.  Its value is a string of exactly three

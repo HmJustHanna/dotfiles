@@ -39,6 +39,7 @@ alias diff='diff --color=always'
 export LESS='-R --use-color -Dd+r$Du+b$'
 
 alias c="clear"
+alias ..="cd .."
 alias jctl="journalctl -p 3 -xb"
 alias note="vim $HOME/Documents/notes/ubuntu-server.txt"
 alias feh="feh -F"
@@ -46,6 +47,7 @@ alias N="newsboat"
 alias P="podboat"
 alias M="mocp"
 alias ip="ip -c a"
+alias shdn="shutdown -P now"
 
 alias note="vim $HOME/Documents/notes/ubuntu-server.txt"
 alias weather="curl wttr.in/Mogilev"

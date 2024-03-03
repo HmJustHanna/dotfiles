@@ -1,5 +1,5 @@
 #
-# ~/.bashrc for root user by https://github.com/HmJustHanna
+# ~/.bashrc for user by https://github.com/HmJustHanna
 # some commands are from http://www.gitlab.com/dwt1/
 #
 
@@ -23,18 +23,38 @@ shopt -s checkwinsize
 shopt -s cmdhist
 #shopt -s globstar
 
+alias gi='git init'
+alias gs='git status'
+alias ga='git add'
+alias gc='git commit'
+alias gp='git push'
+alias gb='git branch'
+
 alias ls='ls --color=always'
 alias ll='ls -aXl -I '.' -I '..' --color=always --group-directories-first'
 alias l='ls -aX -I '.' -I '..' --color=always --group-directories-first'
 alias grep='grep --color=always'
+#alias fgrep='fgrep --color=always'
+#alias egrep='egrep --color=always'
 alias diff='diff --color=always'
+#export LESS='-R --use-color -Dd+r$Du+b$'
 
 alias c='clear'
 alias his='history'
 alias ..='cd ..'
 alias :q='exit'
 alias jctl='journalctl -p 3 -xb'
+alias note='vim $HOME/Documents/notes/ubuntu-server.txt'
+alias feh='feh -F'
+alias N='newsboat'
+alias P='podboat'
+alias M='mocp'
 alias ip='ip -c a'
 alias shut='shutdown -P now'
 
-PS1='[\[\e[1;32m\]\u\[\e[m\]\w]\$ '
+alias note='vim $HOME/Documents/notes/arch.txt'
+alias weather='curl wttr.in/Mogilev'
+alias dotfiles='$HOME/Scripts/dotfiles.sh'
+alias gitupdate='$HOME/Scripts/gitupdate.sh'
+
+PS1='[\[\e[1;32m\]\u \[\e[m\]\w]\$ '

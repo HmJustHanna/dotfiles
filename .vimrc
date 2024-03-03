@@ -6,7 +6,7 @@
 set history=500
 set autoread
 au FocusGained,BufEnter * silent! checktime
-
+set mouse=a
 set expandtab
 set tabstop=4
 set shiftwidth=4
@@ -33,7 +33,7 @@ filetype indent on
 syntax enable
 set termguicolors
 set background=dark
-colorscheme wildcharm
+colorscheme dwmcolors
 hi Normal guibg=NONE ctermbg=NONE
 
 set mouse=

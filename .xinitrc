@@ -6,7 +6,7 @@ while true; do
     BAT=$(cat /sys/class/power_supply/BAT1/capacity)                                #battery percentage
     DOTS=$(cd $HOME/dotfiles && git status -s | wc -l)                              #git status for dotfiles
     DWM=$(cd $HOME/suckless/dwm && git status -s | wc -l)                           #git status for dwm
-    xsetroot -name "| DOTS: $DOTS DWM: $DWM | BAT: $BAT% $(date '+ %H:%M %a')"        #show in dwm bar
+    xsetroot -name "| DOTS: $DOTS DWM: $DWM | BAT: $BAT% $(date '+ %H:%M %a')"      #show in dwm bar
 	sleep 60                                                                        #update every min
 done &
 xrdb -merge ~/.Xresources &                                                         #for urxvt

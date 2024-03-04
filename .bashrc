@@ -51,7 +51,7 @@ alias N='newsboat'
 alias P='podboat'
 alias M='mocp'
 alias ip='ip -c a'
-alias shut='shutdown -P now'
+alias off='shutdown -P now'
 
 alias note='vim $HOME/Documents/notes/arch.txt'
 alias weather='curl wttr.in/Mogilev'

@@ -32,8 +32,8 @@ filetype indent on
 
 
 syntax enable
-set termguicolors
 set background=dark
+set termguicolors
 colorscheme dwmcolors
 " hi Normal guibg=NONE ctermbg=NONE
 
@@ -47,7 +47,7 @@ set tw=100
 set laststatus=2
 
 
-"KEYBINDINGS
+" KEYBINDINGS
 
 
 let mapleader = "\<Space>"

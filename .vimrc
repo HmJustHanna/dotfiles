@@ -6,7 +6,7 @@
 set history=500
 set autoread
 au FocusGained,BufEnter * silent! checktime
-set mouse=a
+set mouse=
 set cursorline
 set expandtab
 set tabstop=4
@@ -34,8 +34,8 @@ filetype indent on
 syntax enable
 set background=dark
 set termguicolors
-colorscheme dwmcolors
-" hi Normal guibg=NONE ctermbg=NONE
+colorscheme noirblaze
+hi Normal guibg=NONE ctermbg=NONE
 
 set mouse=
 set wildmenu
@@ -61,11 +61,10 @@ inoremap {+ {<CR>}<Esc>ko
 
 map <leader>tn :tabnew<cr>
 map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
 map <leader>t<leader> :tabnext<cr>
 
 " opens a new tab with the current buffer's path
-map <leader>te :tabedit <C-r>=escape(expand("%:p:h"), " ")<cr>/
+" map <leader>te :tabedit <C-r>=escape(expand("%:p:h"), " ")<cr>/
 
 " return to last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif

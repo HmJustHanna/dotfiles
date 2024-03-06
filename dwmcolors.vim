@@ -55,8 +55,8 @@ hi Special         gui=none       guibg=#000000  guifg=#bbbbbb
 hi SpecialKey                     guibg=#000000  guifg=#005577
 hi SpecialComment                 guibg=#000000  guifg=#bbbbbb
 hi Statement       gui=bold                      guifg=#005577
-hi StatusLine      gui=bold       guibg=#005577  guifg=#000000
-hi StatusLineNC                   guibg=#000000  guifg=#005577
+hi StatusLine      gui=bold       guibg=#000000  guifg=#005577
+hi StatusLineNC                   guibg=#005577  guifg=#000000
 hi StatusLineTerm  gui=bold       guibg=#005577  guifg=#000000  
 hi StatusLineTermNC               guibg=#000000  guifg=#005577
 hi StorageClass    cterm=bold     guibg=#000000  guifg=#005577

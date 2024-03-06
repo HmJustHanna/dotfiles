@@ -9,12 +9,12 @@
 *.cursorColor:  #929292
 
 ! black
-*.color0:   #101930
+*.color0:   #000000
 *.color8:   #808080
 
 ! red
-*.color1:   #80000
-*.color9:   #ff000
+*.color1:   #800000
+*.color9:   #ff0000
 
 ! green
 *.color2:   #008000
@@ -40,13 +40,14 @@
 *.color7:   #929292
 *.color15:  #929292
 
+! URXVT
+
 ! COLORS to MAN
 
 URxvt.colorIT:      yellow
 URxvt.colorBD:      white
 URxvt.colorUL:      magenta
 
-! URXVT
 
 URxvt.font:             xft:Hack Nerd Font:size=12
 URxvt.boldFont:         xft:Hack Nerd Font:bold:size=12
@@ -55,14 +56,14 @@ URxvt.boldFont:         xft:Hack Nerd Font:bold:size=12
 ! URxvt.boldFont:         xft:DejaVu Sans Mono:bold:size=12
 
 URxvt.visualBell:       false
-! URxvt.pointerBlank:     true
+URxvt.pointerBlank:     true
 
 URxvt*scrollBar:        false
 URxvt*cursorBlink:      false
-URxvt*saveLines:        5000
+URxvt*saveLines:        4096
 URxvt*internalBorder:   0
-URxvt*transparent:      1
-URxvt*shading:          25
+! URxvt*transparent:      1
+! URxvt*shading:          25
 URxvt*fading:           40
 ! URxvt*dynamicColors: on
 
@@ -72,5 +73,15 @@ URxvt.iso14755:                 false
 
 ! EXTENSIONS
 
-URxvt.perl-ext-common:  default,font-size
+URxvt.perl-ext-common:  default-confirm-paste,searchable-scrollback,selection-to-clipboard,eval,font-size
+
+! URxvt.keysym.M-c: eval:selection_to_clipboard
+URxvt.keysym.M-v: eval:paste_clipboard
+
+URxvt.keysym.M-K: eval:scroll_up 1
+URxvt.keysym.M-J: eval:scroll_down 1
+URxvt.keysym.M-g: eval:scroll_to_top
+URxvt.keysym.M-G: eval:scroll_to_bottom
+
+URxvt.keysym.C-9: font-size:show
 

@@ -53,7 +53,7 @@ set laststatus=2
 let mapleader = "\<Space>"
 
 " :W sudo saves the file
-command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+" command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 " inoremap ( ()<Esc>ha
 " inoremap [ []<Esc>ha

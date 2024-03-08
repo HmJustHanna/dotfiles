@@ -1,5 +1,5 @@
 #
-# ~/.bash_profile by https://github.com/HmJustHanna
+# ~/.bash_profile
 #
 
 [[ -f ~/.bashrc ]] && . ~/.bashrc

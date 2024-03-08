@@ -34,7 +34,7 @@ filetype indent on
 syntax enable
 set background=dark
 set termguicolors
-colorscheme noirblaze
+colorscheme wildcharm
 hi Normal guibg=NONE ctermbg=NONE
 
 set mouse=

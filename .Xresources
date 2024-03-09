@@ -2,7 +2,9 @@
 ! ~/.Xresources by https://github.com/HmJustHanna
 ! thank you https://www.askapache.com/linux/rxvt-xresources/
 !
-
+! default xterm colors
+! except white
+!
 ! special
 *.foreground:   #929292
 *.background:   #000000
@@ -62,8 +64,8 @@ URxvt*scrollBar:        false
 URxvt*cursorBlink:      false
 URxvt*saveLines:        4096
 URxvt*internalBorder:   0
-! URxvt*transparent:      1
-! URxvt*shading:          25
+URxvt*transparent:      1
+URxvt*shading:          25
 URxvt*fading:           40
 ! URxvt*dynamicColors: on
 

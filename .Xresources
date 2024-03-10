@@ -39,8 +39,8 @@
 *.color14:  #00ffff
 
 ! white
-*.color7:   #929292
-*.color15:  #929292
+*.color7:   #ffffff
+*.color15:  #ffffff
 
 ! URXVT
 

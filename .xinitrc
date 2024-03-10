@@ -11,8 +11,11 @@ while true; do
     xsetroot -name "| DOTS: $DOTS DWM: $DWM DM: $DM ST: $ST | BAT: $BAT% $(date '+ %H:%M') |"      #show in dwm bar
 	sleep 60                                                                        #update every min
 done &
+dunst -print &                                                                      #startc notification daemon
+if [ cat /sys/class/power_supply/BAT1/capacity = '100' ]; then
+    notify-send -w 'Warning!' 'BAT: 100%'
+fi &
 xrdb -merge ~/.Xresources &                                                         #for urxvt
 feh --bg-scale /home/anna/Media/Pictures/wallpapers/simple-arch.png &               #set archlinux wallpaper
 setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle &                 #us/ru layout
-#/usr/bin/urxvt &                                                                   #start urxvt
 exec dwm                                                                            #start dwm

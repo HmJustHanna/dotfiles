@@ -7,14 +7,11 @@ while true; do
     DOTS=$(cd $HOME/dotfiles && git status -s | wc -l)                              #git status for dotfiles
     DWM=$(cd $HOME/suckless/dwm && git status -s | wc -l)                           #git status for dwm
     DM=$(cd $HOME/suckless/dmenu && git status -s | wc -l)                          #git status for dwm
-    ST=$(cd $HOME/suckless/st && git status -s | wc -l)                             #git status for dwm
-    xsetroot -name "| DOTS: $DOTS DWM: $DWM DM: $DM ST: $ST | BAT: $BAT% $(date '+ %H:%M') |"      #show in dwm bar
+    xsetroot -name "| DOTS: $DOTS DWM: $DWM DM: $DM | BAT: $BAT% $(date '+ %H:%M') |"      #show in dwm bar
 	sleep 60                                                                        #update every min
 done &
-dunst -print &                                                                      #startc notification daemon
-if [ cat /sys/class/power_supply/BAT1/capacity = '100' ]; then
-    notify-send -w 'Warning!' 'BAT: 100%'
-fi &
+#dunst -print &                                                                      #startc notification daemon
+#$HOME/Scripts/bat-w.sh &
 xrdb -merge ~/.Xresources &                                                         #for urxvt
 feh --bg-scale /home/anna/Media/Pictures/wallpapers/simple-arch.png &               #set archlinux wallpaper
 setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle &                 #us/ru layout

@@ -6,6 +6,7 @@
 # If not running interactively, don't do anything
 [[ $- != *i* ]] && return
 
+export COLORTERM='truecolor'
 export BROWSER='firefox'
 export EDITOR='vim'
 export MANPAGER='less'
@@ -41,10 +42,8 @@ alias ..='cd ..'
 alias :q='exit'
 alias feh='feh -F'
 alias mkdir='mkdir -p'
-# alias M='mocp'
 alias M='mocp'
 alias off='shutdown -P now'
-alias ping='ping archlinux.org'
 alias note='vim $HOME/Documents/notes/arch.txt'
 
 alias doc="cd $HOME/Documents"

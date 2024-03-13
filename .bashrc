@@ -10,6 +10,7 @@ export COLORTERM='truecolor'
 export BROWSER='firefox'
 export EDITOR='vim'
 export MANPAGER='less'
+export PATH="${PATH}:/home/anna/.local/bin"
 #export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
 HISTSIZE=1000
@@ -28,7 +29,7 @@ alias ga='git add'
 alias gc='git commit'
 alias gcl='git clone'
 alias gp='git push'
-alias gu='$HOME/Scripts/gitupdate.sh'
+alias gu='$HOME/.local/bin/gitupdate.sh'
 
 alias ls='ls --color=auto'
 alias ll='ls -aXl -I '.' -I '..' --color=auto --group-directories-first'
@@ -48,8 +49,8 @@ alias note='vim $HOME/Documents/notes/arch.txt'
 
 alias doc="cd $HOME/Documents"
 alias dow="cd $HOME/Downloads"
-alias sh="cd $HOME/Scripts"
-alias dot='$HOME/Scripts/dotfiles.sh' # move all dotfiles to local repo
+alias sh="cd $HOME/.local/bin"
+alias dot='$HOME/.local/bin/dotfiles.sh' # move all dotfiles to local repo
 
 alias weather='curl wttr.in/Mogilev'
 

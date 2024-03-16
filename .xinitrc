@@ -2,18 +2,21 @@
 #
 # ~/.xinitrc by https://github.com/HmJustHanna
 #
-while true; do
-    BAT=$(cat /sys/class/power_supply/BAT1/capacity)                                #battery percentage
-    DOTS=$(cd $HOME/dotfiles && git status -s | wc -l)                              #git status for dotfiles
-    SH=$(cd $HOME/Scripts && git status -s | wc -l)                              #git status for dotfiles
-    DWM=$(cd $HOME/suckless/dwm && git status -s | wc -l)                           #git status for dwm
-    DM=$(cd $HOME/suckless/dmenu && git status -s | wc -l)                          #git status for dwm
-    xsetroot -name "| DOTS: $DOTS SH: $SH DWM: $DWM DM: $DM | BAT: $BAT% $(date '+ %H:%M') |"      #show in dwm bar
-	sleep 60                                                                        #update every min
-done &
-#dunst -print &                                                                      #startc notification daemon
-#$HOME/Scripts/bat-w.sh &
-xrdb -merge ~/.Xresources &                                                         #for urxvt
+
+if [ -d /etc/X11/xinit/xinitrc.d ] ; then
+ for f in /etc/X11/xinit/xinitrc.d/?*.sh ; do
+  [ -x "$f" ] && . "$f"
+ done
+ unset f
+fi
+
+$HOME/.local/bin/statusbar.sh &                                                     #statusbar for dwm
+dunst -print &                                                                      #start notification daemon
+#$HOME/.local/bin/numlock.sh &                                                       #numlock status
+$HOME/.local/bin/battery-notify.sh &                                                #notify if battery <= 15%
+xrdb -merge ~/.Xresources                                                           #styling for urxvt
+exec urxvt &                                                                        #run urxvt
 feh --bg-scale /home/anna/Media/Pictures/wallpapers/simple-arch.png &               #set archlinux wallpaper
 setxkbmap -model pc105 -layout us,ru -option grp:win_space_toggle &                 #us/ru layout
+
 exec dwm                                                                            #start dwm

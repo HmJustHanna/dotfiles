@@ -34,7 +34,7 @@ colorscheme 256_noir
 syntax enable
 set background=dark
 set termguicolors
-hi Normal guibg=NONE ctermbg=NONE
+" hi Normal guibg=NONE ctermbg=NONE
 
 set mouse=
 set wildmenu

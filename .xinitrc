@@ -12,7 +12,6 @@ fi
 
 $HOME/.local/bin/statusbar.sh &                                                     #statusbar for dwm
 dunst -print &                                                                      #start notification daemon
-#$HOME/.local/bin/numlock.sh &                                                       #numlock status
 $HOME/.local/bin/battery-notify.sh &                                                #notify if battery <= 15%
 xrdb -merge ~/.Xresources                                                           #styling for urxvt
 exec urxvt &                                                                        #run urxvt

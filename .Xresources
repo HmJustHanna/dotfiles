@@ -64,8 +64,8 @@ URxvt*scrollBar:        false
 URxvt*cursorBlink:      false
 URxvt*saveLines:        4096
 URxvt*internalBorder:   0
-URxvt*transparent:      1
-URxvt*shading:          25
+! URxvt*transparent:      1
+! URxvt*shading:          25
 ! URxvt*fading:           40
 ! URxvt*dynamicColors: on
 

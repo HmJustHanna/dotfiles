@@ -30,8 +30,7 @@ filetype indent on
 
 " INTERFACE
 
-" colorscheme base16-grayscale-dark 
-colorscheme quiet
+colorscheme 256_noir
 syntax enable
 set background=dark
 set termguicolors

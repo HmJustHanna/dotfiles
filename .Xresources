@@ -75,8 +75,9 @@ URxvt.iso14755:                 false
 
 ! EXTENSIONS
 
-URxvt.perl-ext-common:  default-confirm-paste,searchable-scrollback,eval,font-size
-
+URxvt.perl-ext-common: searchable-scrollback,eval
+! font-size
+! default-confirm-paste
 URxvt.keysym.M-K: eval:scroll_up 1
 URxvt.keysym.M-J: eval:scroll_down 1
 URxvt.keysym.M-g: eval:scroll_to_top

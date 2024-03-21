@@ -7,3 +7,5 @@
 [user]
 	email = evdokimovaaa.job@gmail.com
 	name = HmJustHanna
+[init]
+	defaultBranch = main

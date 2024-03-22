@@ -5,7 +5,7 @@
 
 set history=500
 set autoread
-au FocusGained,BufEnter * silent! checktime
+"au FocusGained,BufEnter * silent! checktime
 set mouse=
 set cursorline
 set expandtab
@@ -30,7 +30,9 @@ filetype indent on
 
 " INTERFACE
 
-colorscheme 256_noir
+"colorscheme monotone
+"colorscheme 256_noir
+colorscheme quiet
 syntax enable
 set background=dark
 set termguicolors

@@ -60,7 +60,8 @@ alias tru='trans -b -t ru "$1"' #target lang is ru
 alias note='vim $HOME/Documents/notes/arch.txt'
 
 function parse_git_branch {
-    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/\1/';
+    git branch 2> /dev/null | awk '{ print $2 }';
+
 }
 #PS1="[${GREEN}\u${NC}][\W][${GREEN}\$(parse_git_branch)${NC}] -> "
 PS1="[${GREEN}\u${NC}][\W] > "

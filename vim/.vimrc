@@ -1,6 +1,8 @@
 "
 " ~/.vimrc by https://github.com/HmJustHanna
 "
+" last modified: 2024 Mar 23
+"
 " sources:
 " https://github.com/amix/vimrc/blob/master/vimrcs/basic.vim
 "
@@ -38,7 +40,7 @@ colorscheme quiet
 syntax enable
 set background=dark
 set termguicolors
-" hi Normal guibg=NONE ctermbg=NONE
+"hi Normal guibg=NONE ctermbg=NONE
 
 set mouse=
 set wildmenu
@@ -50,14 +52,14 @@ set tw=100
 set laststatus=2
 
 
-" KEYBINDINGS & FUNCTIONS
+" KEYBINDINGS 
 
 
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
 
 inoremap {+ {<CR>}<Esc>ko
-" inoremap ( ()<Esc>ha
-" inoremap [ []<Esc>ha
+"inoremap ( ()<Esc>ha
+"inoremap [ []<Esc>ha
 
 let mapleader = "\<Space>"
 map <leader>tn :tabnew<cr>
@@ -65,17 +67,23 @@ map <leader>tc :tabclose<cr>
 map <leader>t<leader> :tabnext<cr>
 
 " opens a new tab with the current buffer's path
-" map <leader>te :tabedit <C-r>=escape(expand("%:p:h"), " ")<cr>/
+"map <leader>te :tabedit <C-r>=escape(expand("%:p:h"), " ")<cr>/
 
-" return to last edit position when opening files
+
+" FUNCTIONS
+
+
+" return to the last edit position when opening files
 au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
 
+" read template for *.x files
 if has("autocmd")
     augroup templates
         autocmd BufNewFile *.sh 0r ~/.vim/templates/skeleton.sh
     augroup END
 endif
 
+" record the last date the file was edited
 autocmd BufWritePre,FileWritePre *.sh   ks|call LastMod()|'s
 fun LastMod()
     if line("$") > 20

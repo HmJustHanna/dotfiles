@@ -32,7 +32,6 @@ set -o vi
 shopt -s histappend
 shopt -s checkwinsize
 shopt -s cmdhist
-shopt -s autocd #'cd Downloads' -> 'Downloads'
 #shopt -s globstar
 
 alias gi='git init'
@@ -55,8 +54,10 @@ alias :q='exit'
 alias off='shutdown -P now'
 alias feh='feh -.'
 alias mkdir='mkdir -p'
-alias t='trans -d' #target lang is en
-alias tru='trans -b -t ru "$1"' #target lang is ru
+alias t='trans -d'
+alias tru='trans -b -t ru'
+alias yt='ytfzf -t'
+alias rt='rtorrent'
 alias note='vim $HOME/Documents/notes/arch.txt'
 
 function parse_git_branch {
